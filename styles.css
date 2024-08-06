@@ -1,0 +1,105 @@
+/* Base styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Fallback background color */
+    background-image: url('images/background.jpg'); /* Background image for the page */
+    background-size: cover; /* Ensures the background image covers the entire page */
+    background-position: center; /* Centers the background image */
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo styles */
+.logo-container {
+    text-align: center; /* Centers the logo horizontally */
+    margin-top: 20px; /* Space above the logo */
+}
+
+.logo {
+    width: 300px; /* Larger logo width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Main container styles */
+.container {
+    max-width: 800px; /* Maximum width of the container */
+    margin: 20px auto; /* Center the container with auto margin */
+    background-image: url('images/container-background.jpg'); /* Container background image */
+    background-size: cover; /* Ensure the background image covers the entire container */
+    background-position: center; /* Center the image within the container */
+    padding: 20px; /* Padding inside the container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    color: #00ff00; /* Text color */
+    border-radius: 10px; /* Rounded corners for the container */
+}
+
+/* Heading styles */
+h1 {
+    text-align: center; /* Center-align the main heading */
+}
+
+/* Form group styles */
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+    display: block; /* Label as a block element */
+    margin-bottom: 5px; /* Space below labels */
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%; /* Full width inputs */
+    padding: 8px; /* Padding inside inputs */
+    box-sizing: border-box; /* Include padding in width calculation */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent input background for readability */
+    color: #333; /* Text color inside inputs */
+}
+
+/* Button styles */
+button {
+    display: block; /* Block-level button */
+    width: 100%; /* Full width button */
+    padding: 10px; /* Padding inside the button */
+    background-color: #00ff00; /* Button background color */
+    color: rgb(0, 0, 0); /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #00ff00; /* Darker color on hover */
+}
+
+/* Results section styles */
+#results {
+    margin-top: 20px; /* Space above results */
+}
+
+hr {
+    margin-top: 20px; /* Space above horizontal rule */
+    margin-bottom: 20px; /* Space below horizontal rule */
+    border: 0; /* Remove default border */
+    border-top: 1px solid #eee; /* Custom border style */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .logo {
+        width: 200px; /* Adjusted logo size for smaller screens */
+    }
+
+    .container {
+        padding: 15px; /* Adjust container padding on smaller screens */
+    }
+
+    button {
+        padding: 8px; /* Adjust button padding on smaller screens */
+    }
+}

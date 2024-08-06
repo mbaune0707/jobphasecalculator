@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Phase Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Logo Container -->
+    <div class="logo-container">
+        <img src="images/logo.png" alt="Company Logo" class="logo">
+    </div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <h1>Job Phase Calculator</h1>
+        <form id="jobForm">
+            <div class="form-group">
+                <label for="jobNumber">Job Number:</label>
+                <input type="text" id="jobNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" required>
+            </div>
+            <div class="form-group">
+                <label for="totalEstimate">Total Estimate ($):</label>
+                <input type="number" id="totalEstimate" required>
+            </div>
+            <div class="form-group">
+                <label for="downpayment">Downpayment (%):</label>
+                <input type="number" id="downpayment" required>
+            </div>
+            <div class="form-group">
+                <label for="phases">Number of Phases:</label>
+                <input type="number" id="phases" min="1" max="10" required>
+            </div>
+            <div id="phaseInputs"></div>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="results"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
