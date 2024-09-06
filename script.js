@@ -1,3 +1,11 @@
+// Function to format numbers as currency
+function formatCurrency(value) {
+    return value.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    });
+}
+
 document.getElementById('jobForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -16,11 +24,12 @@ document.getElementById('jobForm').addEventListener('submit', function(event) {
         const pulledFromDownpayment = (downpaymentPercent / 100) * phaseValue;
         const billedToCustomer = phaseValue - pulledFromDownpayment;
 
+        // Generate the result HTML with formatted currency values
         resultHTML += `
             <h3>Phase ${i}</h3>
-            <p>Phase Value: $${phaseValue.toFixed(2)}</p>
-            <p>Pulled from Downpayment: $${pulledFromDownpayment.toFixed(2)}</p>
-            <p>Billed to Customer: $${billedToCustomer.toFixed(2)}</p>
+            <p>Phase Value: ${formatCurrency(phaseValue)}</p>
+            <p>Pulled from Downpayment: ${formatCurrency(pulledFromDownpayment)}</p>
+            <p>Billed to Customer: ${formatCurrency(billedToCustomer)}</p>
             <hr>
         `;
     }
@@ -37,7 +46,7 @@ document.getElementById('phases').addEventListener('change', function() {
         phaseInputsHTML += `
             <div class="form-group">
                 <label for="phaseValue${i}">Phase ${i} Value ($):</label>
-                <input type="number" id="phaseValue${i}" required>
+                <input type="number" id="phaseValue${i}" step="0.01" required>
             </div>
         `;
     }
